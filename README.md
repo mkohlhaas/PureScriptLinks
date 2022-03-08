@@ -1,6 +1,6 @@
-1. Check number of pages:
+1. Check number of pages by looking at `link/rel="next"` property:
 ```shell
-curl -I -H "Accept: application/vnd.github.v3+json" "https://GITHUB_TOKEN:x-oauth-basic@api.github.com/search/repositories?q=PureScript"
+curl --silent -I -H "Accept: application/vnd.github.v3+json" "https://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:x-oauth-basic@api.github.com/search/repositories?q=PureScript" | grep 'link:' | grep 'page='
 ```
 2. Download all links
 ```shell
